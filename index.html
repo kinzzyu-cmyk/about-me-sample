@@ -1,13 +1,290 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about-me-sample</title>
+    <meta
+      name="description"
+      content="의상 & 디자인 교사 김이슬 — 교실에서 탐구하고 질문하며, 미래의 디자이너를 양성합니다."
+    />
+    <title>김이슬 | 의상 &amp; 디자인 교사</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- 배경 기하학 패턴 레이어 -->
+    <div class="bg-pattern" aria-hidden="true"></div>
+
+    <!-- 상단 내비게이션 헤더 -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#hero" class="brand-logo" aria-label="김이슬 홈으로 이동">
+          <span class="brand-name">김이슬</span>
+          <span class="brand-role">Clothing &amp; Design Educator</span>
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="메뉴 열기"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="주요 영역 메뉴">
+          <ul class="nav-list">
+            <li><a href="#hero" class="nav-link active">소개</a></li>
+            <li><a href="#philosophy" class="nav-link">나의 교육 철학</a></li>
+            <li><a href="#research" class="nav-link">주요 연구 관심사</a></li>
+            <li><a href="#projects" class="nav-link">수업 및 연구 프로젝트</a></li>
+            <li><a href="#contact" class="nav-link">연락처</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ① 첫 화면 (Hero) -->
+      <section id="hero" class="section hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <p class="role-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>의상 &amp; 디자인 교사</span>
+            </p>
+
+            <h1 class="hero-title">
+              <span class="hero-name">김이슬</span>
+              <span class="hero-slogan">
+                “교실에서 <span class="text-gradient">탐구하고 질문</span>하며,<br />
+                <span class="text-gradient-alt">미래의 디자이너</span>를 양성합니다.”
+              </span>
+            </h1>
+
+            <!-- [수정 안내] 아래 문단에 교육과 연구에 대한 짧은 자기소개를 입력해 주세요. -->
+            <p class="hero-intro placeholder-text">
+              [교육과 연구에 대한 자기소개를 입력해 주세요.]
+            </p>
+
+            <div class="hero-actions">
+              <a href="#philosophy" class="btn btn-primary">나의 이야기</a>
+              <a href="#projects" class="btn btn-secondary">연구 및 프로젝트</a>
+            </div>
+          </div>
+
+          <!-- 교체 가능한 프로필 이미지 자리 표시자 -->
+          <div class="hero-visual reveal">
+            <div class="profile-placeholder-card" tabindex="0" aria-label="프로필 이미지 자리 표시자">
+              <!-- [수정 안내] 실제 프로필 사진을 사용하려면 아래 .placeholder-graphic 요소를 <img src="/src/assets/profile.jpg" alt="김이슬 교사 프로필 사진" />으로 교체해 주세요. -->
+              <div class="placeholder-graphic">
+                <svg
+                  class="placeholder-svg"
+                  viewBox="0 0 120 120"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle cx="60" cy="60" r="46" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
+                  <path
+                    d="M60 28L76 54H44L60 28Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <rect
+                    x="42"
+                    y="62"
+                    width="36"
+                    height="26"
+                    rx="4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <circle cx="60" cy="46" r="4" fill="currentColor" />
+                </svg>
+                <span class="placeholder-label">[프로필 이미지를 추가할 수 있는 자리 표시자입니다.]</span>
+              </div>
+              <div class="profile-meta">
+                <span class="profile-meta-name">김이슬</span>
+                <span class="profile-meta-role">의상 &amp; 디자인 교사</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ② 나의 교육 철학 -->
+      <section id="philosophy" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-eyebrow">Educational Philosophy</span>
+            <h2 class="section-title">
+              나의 <span class="text-gradient">교육 철학</span>
+            </h2>
+            <p class="section-subtitle">
+              수업과 연구를 통해 새로운 가능성을 탐구하고 학생의 성장을 이끄는 세 가지 기준입니다.
+            </p>
+          </div>
+
+          <!-- [수정 안내] 각 카드의 .card-description 영역에 해당 교육 철학 설명을 입력해 주세요. -->
+          <div class="card-grid card-grid-3">
+            <article class="glass-card accent-lavender reveal" tabindex="0">
+              <div class="card-top">
+                <span class="card-number" aria-hidden="true">01</span>
+                <span class="card-tag">Student-Centered</span>
+              </div>
+              <h3 class="card-title">학생의 생각에서 출발하는 수업</h3>
+              <p class="card-description placeholder-text">
+                [해당 교육 철학에 대한 설명을 입력해 주세요.]
+              </p>
+            </article>
+
+            <article class="glass-card accent-mint reveal" tabindex="0">
+              <div class="card-top">
+                <span class="card-number" aria-hidden="true">02</span>
+                <span class="card-tag">Inquiry &amp; Ideation</span>
+              </div>
+              <h3 class="card-title">탐구와 발상을 통해 발전하는 디자인</h3>
+              <p class="card-description placeholder-text">
+                [해당 교육 철학에 대한 설명을 입력해 주세요.]
+              </p>
+            </article>
+
+            <article class="glass-card accent-pink reveal" tabindex="0">
+              <div class="card-top">
+                <span class="card-number" aria-hidden="true">03</span>
+                <span class="card-tag">AI-Enhanced Learning</span>
+              </div>
+              <h3 class="card-title">AI 기술을 활용한 배움의 확장</h3>
+              <p class="card-description placeholder-text">
+                [해당 교육 철학에 대한 설명을 입력해 주세요.]
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ③ 주요 연구 관심사 -->
+      <section id="research" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-eyebrow">Research Interests</span>
+            <h2 class="section-title">
+              주요 <span class="text-gradient-alt">연구 관심사</span>
+            </h2>
+            <p class="section-subtitle">
+              의상·디자인 교과와 미래 교육 기술의 접점을 깊이 있게 탐구합니다.
+            </p>
+          </div>
+
+          <!-- [수정 안내] 각 연구 관심사 항목의 설명 텍스트를 자유롭게 수정하거나 항목을 추가해 주세요. -->
+          <div class="card-grid card-grid-3">
+            <article class="glass-card research-card accent-lavender reveal" tabindex="0">
+              <span class="research-index" aria-hidden="true">Area 01</span>
+              <h3 class="card-title">의상·디자인 교육과 AI 융합교육</h3>
+              <p class="card-description placeholder-text">
+                [해당 연구 관심사에 대한 설명을 입력해 주세요.]
+              </p>
+            </article>
+
+            <article class="glass-card research-card accent-mint reveal" tabindex="0">
+              <span class="research-index" aria-hidden="true">Area 02</span>
+              <h3 class="card-title">AI와 디지털 도구를 활용한 수업</h3>
+              <p class="card-description placeholder-text">
+                [해당 연구 관심사에 대한 설명을 입력해 주세요.]
+              </p>
+            </article>
+
+            <article class="glass-card research-card accent-pink reveal" tabindex="0">
+              <span class="research-index" aria-hidden="true">Area 03</span>
+              <h3 class="card-title">학생의 자기주도적 학습 과정</h3>
+              <p class="card-description placeholder-text">
+                [해당 연구 관심사에 대한 설명을 입력해 주세요.]
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ 수업 및 연구 프로젝트 -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-eyebrow">Classes &amp; Research Projects</span>
+            <h2 class="section-title">
+              수업 및 <span class="text-gradient">연구 프로젝트</span>
+            </h2>
+            <div class="theme-banner">
+              <span class="theme-label">대표 주제</span>
+              <strong class="theme-value">생성형 AI × 디자인 교육 × 미래역량</strong>
+            </div>
+          </div>
+
+          <!-- [수정 안내] 새로운 프로젝트를 추가하려면 아래 .project-card 블록을 복사하여 .project-grid 내부에 붙여넣어 주세요. -->
+          <div class="project-grid" id="project-list">
+            <article class="glass-card project-card accent-lavender reveal" tabindex="0">
+              <div class="project-card-header">
+                <span class="project-status-badge">
+                  <span class="status-label">진행 상태</span>
+                  <span class="status-value placeholder-text">[진행 상태를 입력해 주세요.]</span>
+                </span>
+              </div>
+
+              <h3 class="project-title placeholder-text">[프로젝트명을 입력해 주세요.]</h3>
+
+              <p class="project-description placeholder-text">
+                [수업 또는 연구 프로젝트의 내용을 입력해 주세요.]
+              </p>
+
+              <div class="project-keywords" aria-label="핵심 키워드">
+                <span class="keyword-chip keyword-lavender">생성형 AI</span>
+                <span class="keyword-chip keyword-mint">디자인 교육</span>
+                <span class="keyword-chip keyword-pink">미래역량</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑤ 연락처 -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="glass-card contact-card reveal">
+            <span class="section-eyebrow">Contact</span>
+            <h2 class="section-title">
+              함께 나누는 <span class="text-gradient">교육과 디자인 이야기</span>
+            </h2>
+            <p class="contact-description">
+              수업 및 연구, 의상·디자인 교육에 관한 문의는 아래 이메일로 연락해 주세요.
+            </p>
+
+            <div class="contact-action">
+              <a
+                href="mailto:charmesle@nate.com"
+                class="email-link"
+                aria-label="김이슬 교사에게 이메일 보내기: charmesle@nate.com"
+              >
+                <span class="email-label">이메일</span>
+                <span class="email-address">charmesle@nate.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">
+          <strong>김이슬</strong> · 의상 &amp; 디자인 교사
+        </p>
+        <a href="mailto:charmesle@nate.com" class="footer-email">charmesle@nate.com</a>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
